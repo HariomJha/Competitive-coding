@@ -1,0 +1,10 @@
+import sys
+
+arr = [int(x) for x in sys.argv[1].split(',')]
+
+def sumOfHighestAndLowestElements(arr):
+	arr.sort()
+	x=arr[0]+arr[len(arr)-1]
+	return x
+
+print(sumOfHighestAndLowestElements(arr))
