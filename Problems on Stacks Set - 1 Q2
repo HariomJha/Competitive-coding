@@ -1,1 +1,27 @@
+import sys
 
+expr = sys.argv[1]
+
+def evaluate(expr):
+	op=set(['+','-','*','/'])
+	l=[]
+	for i in expr[::-1]:
+		if i in op:
+			a=l.pop()
+			b=l.pop()
+			if i =='+':
+				r=b+a
+			elif i=='-':
+				r=a-b
+			elif i=='*':
+				r=b*a
+			elif i=='/':
+				r=b/a
+			l.append(int(r))
+		else:
+			l.append(int(i))
+	print(*l)
+b=expr.split()
+evaluate(b)
+
+#print(evaluate(expr))
