@@ -1,0 +1,15 @@
+import sys
+
+arr = [int(x) for x in sys.argv[1].split(',')]
+
+def maxSumContiguousSubArray(arr):
+	n=len(arr)
+	m=-100000000
+	for i in range(n):
+		s=0
+		for j in range(i,n):
+			s += arr[j]
+			if s>m:
+				m=s
+	return m
+print(maxSumContiguousSubArray(arr))
