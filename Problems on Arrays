@@ -1,1 +1,11 @@
+import sys
 
+arr = [int(x) for x in sys.argv[1].split(',')]
+
+def sumOfArray(arr):
+	x=0
+	for i in range(len(arr)):
+		x=x+arr[i]
+	return x
+
+print(sumOfArray(arr))
