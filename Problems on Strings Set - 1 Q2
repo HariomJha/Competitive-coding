@@ -1,0 +1,16 @@
+import sys
+
+s = sys.argv[1]
+
+def isPrimeLengthPalindrome(s):
+	a=1
+	for i in range(2,len(s)):
+		if(len(s)%i == 0):
+			a=0
+			break
+	if a==1 and s==s[::-1]:
+		return 1
+	else:
+		return 0
+
+print("true" if isPrimeLengthPalindrome(s) else "false");
