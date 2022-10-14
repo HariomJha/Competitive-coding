@@ -1,0 +1,11 @@
+import sys
+
+arr = [int(x) for x in sys.argv[1].split(',')]
+
+def middleElementOfArray(arr):
+	if(len(arr)%2 != 0):
+		return arr[(((len(arr))//2))]
+	else:
+		return arr[(((len(arr))//2)-1)]
+
+print(middleElementOfArray(arr))
