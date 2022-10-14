@@ -1,0 +1,18 @@
+import sys
+
+arr = [int(x) for x in sys.argv[1].split(',')]
+s = int(sys.argv[2])
+
+def pairsOfSum(arr, s):
+	n=len(arr)
+	l=[]
+	for i in range(n):
+		for j in range(i+1,n):
+			if(arr[i]+arr[j]==s):
+				l.append(f"<{i},{j}>")
+	if(len(l)==0):
+		print("no such pairs")
+	else:
+		print(*l,sep=",")
+pairsOfSum(arr,s)
+#print(pairsOfSum(arr, s))
